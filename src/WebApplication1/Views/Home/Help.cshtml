@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Help Page";
+}
+
+<div class="jumbotron" style="text-align:center">
+    <h1>@ViewData["Title"].</h1>
+    <h3>@ViewData["Message"]</h3>
+</div>
+
+
+<div class="row" style="text-align:center">    
+    <div class="col-xs-4">
+        <div class="col-xs-12 alert alert-info">
+            <h2>CTCA Scan Information</h2>
+            <p>Information about CTCA Scans.</p><br />
+            <a class="btn btn-default btn-default" id="" asp-action="CTCAInfo">Learn More</a>
+        </div>    
+    </div>
+
+    <div class="col-xs-4">
+        <div class="col-xs-12 alert alert-info">
+            <h2>CTCA Scan Tips</h2>
+            <p>Getting the most out of each CTCA scan.</p><br />
+            <a class="btn btn-default btn-default" id="" asp-action="ScanTips">Learn More</a>
+        </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="col-xs-12 alert alert-info">
+            <h2>Walkthrough</h2>
+            <p>A step by step guide to complete process.</p><br />
+            <a class="btn btn-default btn-default" id="" asp-action="Walkthrough">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="text-align:center">
+    <div class="col-xs-4">
+        <div class="col-xs-12 alert alert-info">
+            <h2>Vitrea Work-Up Tips</h2>
+            <p>Info for working up the scans on the vitrea.</p><br />
+            <a class="btn btn-default btn-default" asp-action="WorkupTips">Learn More</a>
+        </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="col-xs-12 alert alert-info">
+            <h2>Calcium Score Tips</h2>
+            <p>The In's and Out's of Calciums Scores.</p><br />
+            <a class="btn btn-default btn-default" asp-action="CascoreTips">Learn More</a>
+        </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="col-xs-12 alert alert-dismissable">
+            <h2>Coming Soon</h2>
+            <p>New features coming soon.</p><br />
+            <a class="btn btn-default btn-default" id="">Learn More</a>
+        </div>
+    </div>
+</div>

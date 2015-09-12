@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "BMI";
+}
+
+<div class="jumbotron" style="text-align:center">
+    <h1>@ViewData["Title"].</h1>
+    <h3>@ViewData["Message"]</h3>
+</div>
+
+<script src="~/js/site.js"></script>
+
+<div style="text-align:center">
+    <div class="row">
+        <div id="bmiscantypeheadercol"class="col-xs-4" style="text-align:right">
+            <h3>
+                Scan Type:
+            </h3>
+        </div>
+        <div class="col-xs-6" style="text-align:left">
+            <div class="col-xs-3">
+                <h3><input type="radio" name="scanType" id="CTCA" checked="checked" /> CTCA</h3>
+            </div>
+            <div class="col-xs-3">
+                <h3><input type="radio" name="scanType" id="CABG" /> CABG</h3>
+            </div>
+            <div class="col-xs-6">
+                <h3><input type="radio" name="scanType" id="TRO" /> Triple Rule-Out</h3>
+            </div>
+                
+        </div>
+        <div class="col-xs-2" style="text-align:left"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8">
+            <div class="row"><input id="height" type="number" placeholder="Height (m)" /></div><br />
+            <div class="row"><input id="weight" type="number" placeholder="Weight (kg)" /></div><br />
+
+            <div>
+                <button type="button" id="calcBtnBMI" class="btn btn-primary btn-lg" onclick="calculateBMI(height.value,weight.value)">Calculate</button>
+                <button type="button" id="clearBtnBMI" class="btn btn-danger btn-lg" onclick="clearResultBMI()">Clear</button>
+            </div>
+        </div>
+        <div id="bmiresultcol" class="col-xs-4" style="border-left: 1px solid; text-align:left">
+            <div>
+                <h2>BMI: <span id="result">0.0</span></h2>
+            </div>
+
+            <div>
+                <h2>Contrast: <span id="contrast">0.0</span></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="modalTitle">Check Contrast</h4>
+            </div>
+            <div class="modal-body">
+                <p style="text-align:center" id="modalText">text</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

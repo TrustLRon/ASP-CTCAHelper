@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "CTCA Helper"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-WebApplication1-d099df78-620e-4794-ae36-e0d7fb75e323;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/carousel1.png" alt="CTCA Scan" class="img-responsive">
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Coronary Artery CT Scan - Volume scanning the heart between beats.
+                        <a class="btn btn-default btn-default" asp-action="CTCAInfo">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/carousel2.png" alt="New Checklist" class="img-responsive">
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Start a new patient checklist.
+                        <a class="btn btn-default btn-default" asp-action="NewScan">
+                            Start New
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/carousel3.png" alt="BMI" class="img-responsive">
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Enter height and weight to work out volume of contrast required.
+                        <a class="btn btn-default btn-default" asp-action="BMI">
+                            New BMI
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/carousel4.png" alt="DLP" class="img-responsive">
+            <div class="container">
+                <div class="carousel-caption">
+                    <p>
+                        Enter DLP values to work out patient dose.
+                        <a class="btn btn-default btn-default" asp-action="DLP">
+                            New DLP
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="text-align:center">
+    <div class="col-xs-4">
+        <h2>CTCA Info</h2>
+        <p>Information about CTCA scans and their protocols.</p><br />
+        <a class="btn btn-default btn-default" asp-action="CTCAInfo">Learn More</a>
+    </div>
+    <div class="col-xs-4">
+        <h2>Help</h2>
+        <p>Information for new users.</p><br />
+        <a class="btn btn-default btn-default" id="" asp-action="Help">Learn More</a>
+    </div>
+    <div class="col-xs-4">
+        <h2>Walkthrough</h2>
+        <p>A step by step guide to CTCA scans.</p><br />
+        <a class="btn btn-default btn-default" id="" asp-action="Walkthrough">Learn More</a>
+    </div>
+</div>
+
+<hr />
+
+<div>
+    <div class="row" style="text-align:center">
+        <button class="btn-lg btn-primary" id="homestartButton" style="margin-top:2em; margin-bottom:2em; padding:1em 4em 1em 4em" onclick="window.location.href = './Home/NewScan'"><h1>New Scan</h1></button>
+    </div>
+</div>

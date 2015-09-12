@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "DLP";
+}
+
+<div class="jumbotron" style="text-align:center">
+    <h1>@ViewData["Title"].</h1>
+    <h3>@ViewData["Message"]</h3>
+</div>
+
+<script src="~/js/site.js"></script>
+
+<div style="text-align:center">
+    <div class="row">
+        <div class="col-xs-8" style="padding-right: 2em">
+            <div class="row"><input id="caScoreDLP" type="number" placeholder="Ca Score" /><p style="display:inline; padding-left: .5em">mGy.cm</p></div><br />
+            <div class="row"><input id="ctcaDLP" type="number" placeholder="CTCA" /><p style="display:inline; padding-left: .5em">mGy.cm</p></div><br />
+
+            <div>
+                <button type="button" id="calcBtn" class="btn btn-primary btn-lg" onclick="calculateDLP(caScoreDLP.value,ctcaDLP.value)">Calculate</button>
+                <button type="button" id="clearBtn" class="btn btn-danger btn-lg" onclick="clearResultDLP()">Clear</button>
+            </div>
+        </div>
+        <div id="dlpresultcol" class="col-xs-4" style="border-left: 1px solid; text-align:left">
+            <div>
+                <h2 id="caScoreResult">0.00mSv</h2>
+            </div>
+
+            <div>
+                <h2 id="ctcaResult">0.00mSv</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="modalTitle">Check Contrast</h4>
+            </div>
+            <div class="modal-body">
+                <p style="text-align:center" id="modalText">text</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
